@@ -1,0 +1,32 @@
+.list-product {
+    padding: 20px;
+  }
+  
+  .listproduct-format-main {
+    margin-bottom: 20px;
+  }
+  
+  .listproduct-format-main button {
+    margin-right: 10px;
+  }
+  
+  .listproduct-allproduct table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .listproduct-allproduct th, .listproduct-allproduct td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .listproduct-allproduct th {
+    background-color: #f2f2f2;
+  }
+  
+  .total-value {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  

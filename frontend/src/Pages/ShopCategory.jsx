@@ -1,11 +1,21 @@
-import React, { useContext } from 'react'
+import React, { useContext,useState,useEffect } from 'react'
 import './CSS/ShopCategory.css'
 import { ShopContext } from '../Context/ShopContex'
 import { Item } from '../Components/Items/Item'
+import { NewsLetter } from '../Components/NewsLetter/NewsLetter'
 import dropdown_icon from '../Components/Assets/dropdown_icon.png'
+import { Footer } from '../Components/Footer/Footer'
 export const ShopCategory = (props) => {
   
-  const {all_product} = useContext(ShopContext)
+  const[all_product,setAll_product] = useState([]);
+  
+  useEffect(() => {
+      // Fetch all products
+       fetch('http://localhost:4000/allproducts')
+          .then(response => response.json())
+          .then(data => setAll_product(data))
+          .catch(error => console.error('Error fetching products:', error));
+  }, []);
   return (
     <div className='shop-category'>
       <img className='shopcategory-banner' src = {props.banner} ></img>
@@ -31,6 +41,7 @@ export const ShopCategory = (props) => {
         Explore more
 
       </div>
+      <Footer/>
     </div>
   )
 }

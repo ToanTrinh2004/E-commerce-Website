@@ -61,12 +61,14 @@
     margin: 30px 0px;
     gap:20px;
 }
-.productdisplay-right-sizes div{
+.productdisplay-right-sizes input{
     padding: 18px 24px;
     background: #fbfbfb ;
     border: 1px solid #ebebeb;
     border-radius: 3px;
     cursor: pointer;
+    width: 60px;
+    font-size: 20px;
 
 }
 .productdisplay-right button{

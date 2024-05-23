@@ -1,12 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './ProductDisplay.css'
 import { Product } from '../../Pages/Product'
 import star_icon from '../Assets/star_icon.png'
 import star_dull_icon from "../Assets/star_dull_icon.png"
 import { ShopContext } from '../../Context/ShopContex'
+import { useSearchParams } from 'react-router-dom'
 export const ProductDisplay = (props) => {
     const {product} = props;
     const {addToCart} = useContext(ShopContext);
+    const [number,setNumber] = useState(1);
   return (
     <div className='productdisplay'>
         <div className='productdisplay-left'>
@@ -36,21 +38,17 @@ export const ProductDisplay = (props) => {
                 <div className='productdisplay-right-new-old'>${product.new_price}</div>
             </div>
             <div className='productdisplay-right-decription'>
-            jsdlajdjsjsjjsjsjsjssjsjjjjjjjjjjjjjjjjjjjjjj
+            Elevate your everyday style with our Classic Comfort Crew Neck T-Shirt. This versatile wardrobe essential combines effortless style with ultimate comfort, making it perfect for any occasion.
 
             </div>
             <div className='productdisplay-right-size'>
-                <h1>Slect Size</h1>
+                <h1>Quantity</h1>
                 <div className='productdisplay-right-sizes'>
-                    <div>S</div>
-                    <div>M</div>
-                    <div>L</div>
-                    <div>XL</div>
-                    <div>XXL</div>
+                    <input type='number' value={number} onChange={(e)=>{setNumber(e.currentTarget.value)}}></input>
                 </div>
 
             </div>
-            <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
+            <button onClick={()=>{addToCart(product.id,number)}}>ADD TO CART</button>
             <p className='productdisplay-right-category'><span>Category : </span>Women, T-shirt, Crop Top</p>
             <p className='productdisplay-right-category'><span>Tags : </span>Morden, Latest</p>
 

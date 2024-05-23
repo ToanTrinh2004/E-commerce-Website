@@ -15,7 +15,8 @@ export const Product = () => {
       <Breadcrum product={product}/>
       <ProductDisplay product={product}/>
       <DescriptionBox/>
-      <RelatedProduct/>
+      <RelatedProduct category={product.category}/>
+      <button onClick={()=>{alert(product.category)}}>pppp</button>
     </div>
   )
 }

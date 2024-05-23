@@ -10,6 +10,7 @@
     justify-content: center;
     gap: 10px;
     align-items: center;
+    cursor: pointer;
 }
 .nav-logo p{
     color: red;
@@ -21,7 +22,7 @@
     align-items: center;
     list-style: none;
     color: #626262;
-    gap: 50px;
+    gap: 40px;
     font-size: 20px;
 }
 .nav-menu li{
@@ -55,6 +56,27 @@
     font-weight: 500;
     background: white;
     cursor: pointer;
+}
+.nav-login-cart img{
+    width: 40px;
+    height: 40px;
+}
+.nav-login-user {
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center vertically */
+    width: 157px;
+    height: 58px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    background: green;
+    cursor: pointer;
+    flex-direction: row; /* Items are placed in a row */
+    justify-content: center; /* Center horizontally */
+    align-self: center;
 }
 .nav-login-cart button:active{
     background: #f3f3f3;
